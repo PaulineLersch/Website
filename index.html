@@ -1,0 +1,388 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PL IMMO – Hausverwaltung in Eschweiler</title>
+  <meta name="description" content="PL IMMO – Mietverwaltung, WEG-Verwaltung und Sondereigentumsverwaltung in Eschweiler. Inhaberin: Pauline Learch." />
+
+  <!-- Eingebettetes CSS (aus index.css) – alles in einer HTML-Datei -->
+  <style>
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(0, 0%, 100%);
+  --foreground: hsl(20, 14.3%, 4.1%);
+  --muted: hsl(60, 4.8%, 95.9%);
+  --muted-foreground: hsl(25, 5.3%, 44.7%);
+  --popover: hsl(0, 0%, 100%);
+  --popover-foreground: hsl(20, 14.3%, 4.1%);
+  --card: hsl(0, 0%, 100%);
+  --card-foreground: hsl(20, 14.3%, 4.1%);
+  --border: hsl(20, 5.9%, 90%);
+  --input: hsl(20, 5.9%, 90%);
+  --primary: hsl(226, 23%, 54%);
+  --primary-foreground: hsl(211, 100%, 99%);
+  --secondary: hsl(60, 4.8%, 95.9%);
+  --secondary-foreground: hsl(24, 9.8%, 10%);
+  --accent: hsl(60, 4.8%, 95.9%);
+  --accent-foreground: hsl(24, 9.8%, 10%);
+  --destructive: hsl(0, 84.2%, 60.2%);
+  --destructive-foreground: hsl(60, 9.1%, 97.8%);
+  --ring: hsl(20, 14.3%, 4.1%);
+  --radius: 0.5rem;
+
+  /* Custom PL IMMO colors */
+  --primary-dark: hsl(226, 23%, 44%);
+  --primary-light: hsl(210, 40%, 92%);
+  --slate-50: hsl(210, 40%, 98%);
+  --slate-100: hsl(210, 40%, 96%);
+  --slate-200: hsl(214, 32%, 91%);
+  --slate-300: hsl(213, 27%, 84%);
+  --slate-400: hsl(215, 20%, 65%);
+  --slate-500: hsl(215, 16%, 47%);
+  --slate-600: hsl(226, 23%, 54%);
+  --slate-700: hsl(215, 25%, 27%);
+  --slate-800: hsl(217, 33%, 17%);
+  --slate-900: hsl(222, 84%, 5%);
+}
+
+.dark {
+  --background: hsl(240, 10%, 3.9%);
+  --foreground: hsl(0, 0%, 98%);
+  --muted: hsl(240, 3.7%, 15.9%);
+  --muted-foreground: hsl(240, 5%, 64.9%);
+  --popover: hsl(240, 10%, 3.9%);
+  --popover-foreground: hsl(0, 0%, 98%);
+  --card: hsl(240, 10%, 3.9%);
+  --card-foreground: hsl(0, 0%, 98%);
+  --border: hsl(240, 3.7%, 15.9%);
+  --input: hsl(240, 3.7%, 15.9%);
+  --primary: hsl(226, 23%, 54%);
+  --primary-foreground: hsl(211, 100%, 99%);
+  --secondary: hsl(240, 3.7%, 15.9%);
+  --secondary-foreground: hsl(0, 0%, 98%);
+  --accent: hsl(240, 3.7%, 15.9%);
+  --accent-foreground: hsl(0, 0%, 98%);
+  --destructive: hsl(0, 62.8%, 30.6%);
+  --destructive-foreground: hsl(0, 0%, 98%);
+  --ring: hsl(240, 4.9%, 83.9%);
+  --radius: 0.5rem;
+}
+
+@layer base {
+  * { border-color: hsl(var(--border)); }
+  body {
+    font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica Neue, Arial, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+  }
+}
+
+@layer components {
+  .house-button { position: relative; overflow: hidden; transition: all 0.3s ease; }
+  .house-button:hover { transform: translateY(-2px); box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05); }
+  .house-button::before { content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%; transition: all 0.5s ease; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent); }
+  .house-button:hover::before { left: 100%; }
+
+  .service-card { transition: all 0.3s ease; }
+  .service-card:hover { transform: translateY(-4px); box-shadow: 0 25px 25px -5px rgba(0,0,0,0.1), 0 10px 10px -5px rgba(0,0,0,0.04); }
+
+  .nav-link { position: relative; transition: color 0.3s ease; }
+  .nav-link::after { content: ''; position: absolute; width: 0; height: 2px; bottom: -4px; left: 50%; background-color: hsl(var(--primary)); transition: all 0.3s ease; }
+  .nav-link:hover::after { width: 100%; left: 0; }
+
+  .sticky-header { backdrop-filter: blur(12px); background-color: rgba(255,255,255,0.95); border-bottom: 1px solid hsl(214, 32%, 91%); }
+  .fade-in { animation: fadeIn 0.5s ease-in; }
+  .slide-up { animation: slideUp 0.5s ease-out; }
+}
+
+@keyframes fadeIn { from {opacity:0;} to {opacity:1;} }
+@keyframes slideUp { from {opacity:0; transform: translateY(32px);} to {opacity:1; transform: translateY(0);} }
+@keyframes bounce-gentle { 0%,20%,50%,80%,100%{transform:translateY(0);} 40%{transform:translateY(-10px);} 60%{transform:translateY(-5px);} }
+.animate-bounce-gentle { animation: bounce-gentle 2s infinite; }
+
+/* Hilfsklassen/Layouts */
+.container { max-width: 1100px; margin-inline: auto; padding-inline: 16px; }
+.btn { display: inline-block; padding: 12px 18px; border-radius: 9999px; background: var(--primary); color: var(--primary-foreground); border: none; cursor: pointer; text-decoration: none; }
+.btn:focus { outline: 2px solid var(--primary-dark); outline-offset: 2px; }
+.card { background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 20px; }
+.grid { display: grid; gap: 20px; }
+.grid-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.grid-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+@media (max-width: 900px) { .grid-2, .grid-3 { grid-template-columns: 1fr; } }
+.section { padding: 56px 0; }
+.section-alt { background: var(--muted); }
+.h1 { font-size: clamp(28px, 4vw, 40px); line-height: 1.2; margin: 0 0 12px; }
+.h2 { font-size: clamp(22px, 3vw, 30px); line-height: 1.25; margin: 0 0 8px; }
+.h3 { font-size: 18px; line-height: 1.35; margin: 0 0 6px; }
+.lead { font-size: 18px; color: var(--muted-foreground); }
+.tag { display: inline-block; background: var(--primary-light); color: var(--slate-800); padding: 4px 10px; border-radius: 9999px; font-size: 12px; border: 1px solid var(--border); }
+.header { position: sticky; top: 0; z-index: 50; }
+.nav { display: flex; gap: 16px; align-items: center; }
+.nav a { color: inherit; text-decoration: none; padding: 8px 6px; border-radius: 8px; }
+.nav a:hover { background: var(--muted); }
+.footer { font-size: 14px; color: var(--muted-foreground); }
+  </style>
+</head>
+<body>
+  <!-- Kopfbereich / Navigation -->
+  <header class="header sticky-header">
+    <div class="container" style="display:flex;align-items:center;justify-content:space-between;height:72px;">
+      <a href="#top" style="display:flex;align-items:center;gap:10px;text-decoration:none;color:inherit;">
+        <div aria-hidden="true" class="animate-bounce-gentle" style="width:28px;height:28px;border-radius:8px;background:var(--primary);"></div>
+        <strong>PL IMMO</strong>
+      </a>
+      <nav class="nav">
+        <a class="nav-link" href="#leistungen">Leistungen</a>
+        <a class="nav-link" href="#leistungsverzeichnis">Leistungsverzeichnis</a>
+        <a class="nav-link" href="#kontakt">Kontakt</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="section" id="top">
+    <div class="container grid grid-2">
+      <div class="fade-in">
+        <span class="tag">Hausverwaltung in Eschweiler</span>
+        <h1 class="h1">PL IMMO – Miet‑, WEG‑ und Sondereigentumsverwaltung</h1>
+        <p class="lead">Zuverlässige Verwaltung, transparente Abrechnung und klare Kommunikation.</p>
+        <div style="margin-top:18px;display:flex;gap:12px;flex-wrap:wrap;">
+          <a href="#kontakt" class="btn house-button">Kontakt aufnehmen</a>
+          <a href="#leistungsverzeichnis" class="btn house-button" style="background: var(--primary-dark);">Leistungsverzeichnis</a>
+        </div>
+      </div>
+      <div class="slide-up">
+        <div class="card service-card" aria-hidden="true" style="min-height:220px;display:grid;place-items:center;">
+          <div>
+            <div class="tag" style="margin-bottom:8px;">Inhaberin</div>
+            <div class="h2" style="margin:0;">Pauline Learch</div>
+            <p class="lead" style="margin-top:6px;">Dürener Str. 62a · 52249 Eschweiler</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Leistungen (Kurzüberblick) -->
+  <section class="section section-alt" id="leistungen">
+    <div class="container">
+      <h2 class="h2">Unsere Leistungen im Überblick</h2>
+      <p class="lead" style="margin-bottom:18px;">Auszug der häufig nachgefragten Leistungsbereiche.</p>
+      <div class="grid grid-3">
+        <div class="card service-card">
+          <div class="tag" style="margin-bottom:8px;">Mietverwaltung</div>
+          <h3 class="h3">Vermietung &amp; Betreuung</h3>
+          <p>Bonitätsprüfung, Verträge, Mieteinzug und Mahnwesen – effizient und rechtssicher.</p>
+        </div>
+        <div class="card service-card">
+          <div class="tag" style="margin-bottom:8px;">Technische Verwaltung</div>
+          <h3 class="h3">Instandhaltung &amp; Notfälle</h3>
+          <p>Regelmäßige Begehungen, Organisation von Reparaturen und Notfallmanagement.</p>
+        </div>
+        <div class="card service-card">
+          <div class="tag" style="margin-bottom:8px;">Kaufmännisch</div>
+          <h3 class="h3">Buchhaltung &amp; Abrechnung</h3>
+          <p>Objektbuchhaltung, Zahlungsverkehr, Abrechnungen und Liquiditätskontrolle.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Leistungsverzeichnis -->
+  <section class="section" id="leistungsverzeichnis" aria-labelledby="lv-heading">
+    <div class="container">
+      <h2 class="h2" id="lv-heading">Leistungsverzeichnis Verwaltung Mietwohnanlagen</h2>
+
+      <article class="card" style="margin-top:16px;">
+        <details open style="margin-top:10px;">
+          <summary class="h3" style="cursor:pointer;">1. Mietverwaltung</summary>
+          <ul>
+            <li>Auswahl geeigneter Mieter inklusive Bonitätsprüfung</li>
+            <li>Erstellung und Abschluss von Mietverträgen (inkl. Übergabe &amp; Rücknahme der Wohnung)</li>
+            <li>Einziehung der Miete &amp; Betriebskostenvorauszahlungen</li>
+            <li>Mahnwesen bei Mietrückständen</li>
+            <li>Durchführung gesetzlicher und vertraglicher Mieterhöhungen</li>
+            <li>Verwaltung von Kautionen inkl. Abrechnung</li>
+            <li>Betriebskostenabrechnung (kalte Betriebskosten)</li>
+            <li>Kommunikation mit Mietern (schriftlich/mündlich)</li>
+            <li>Abwicklung von Kündigungen (inkl. fristloser Kündigung bei Zahlungsverzug)</li>
+          </ul>
+        </details>
+
+        <details style="margin-top:10px;">
+          <summary class="h3" style="cursor:pointer;">2. Technische Verwaltung</summary>
+          <ul>
+            <li>Objektbegehungen</li>
+            <li>Veranlassung und Überwachung von Instandhaltungs- und Instandsetzungsmaßnahmen</li>
+            <li>Notfallmanagement bei z.&nbsp;B. Rohrbruch, Sturmschäden etc.</li>
+            <li>Meldung von Schäden an Versicherungen</li>
+            <li>Bestellung und Verwaltung von Schlüsseln &amp; Schließanlagen</li>
+            <li>Koordination von Wartungen (z.&nbsp;B. Heizung, Aufzüge, Brandschutz)</li>
+          </ul>
+        </details>
+
+        <details style="margin-top:10px;">
+          <summary class="h3" style="cursor:pointer;">3. Kaufmännische Verwaltung</summary>
+          <ul>
+            <li>Führung der objektbezogenen Buchhaltung</li>
+            <li>Einnahmen-/Ausgabenrechnung</li>
+            <li>Zahlungsverkehr &amp; Liquiditätskontrolle</li>
+            <li>Verwaltung eines separaten Eigentümerkontos</li>
+            <li>Erstellung von Abrechnungen</li>
+          </ul>
+        </details>
+
+        <details style="margin-top:10px;">
+          <summary class="h3" style="cursor:pointer;">4. Vertragsmanagement</summary>
+          <ul>
+            <li>Abschluss, Überwachung und Kündigung von Dienstleistungsverträgen (z.&nbsp;B. Hausmeister, Wartung)</li>
+            <li>Einholung von Angeboten &amp; Auswahlvorschlägen</li>
+            <li>Abrechnung &amp; Kontrolle von Fremdleistungen</li>
+            <li>Unterstützung bei der Geltendmachung von Gewährleistungsansprüchen</li>
+          </ul>
+        </details>
+
+        <details style="margin-top:10px;">
+          <summary class="h3" style="cursor:pointer;">5. Eigentümerkommunikation</summary>
+          <ul>
+            <li>Regelmäßige Information über relevante Vorgänge &amp; Entscheidungen</li>
+            <li>Beratung in Verwaltungsfragen</li>
+            <li>Abstimmung bei Investitionen &amp; Maßnahmen</li>
+          </ul>
+        </details>
+
+        <details style="margin-top:10px;">
+          <summary class="h3" style="cursor:pointer;">6. Sonderleistungen (nach Aufwand / gesonderter Beauftragung)</summary>
+          <ul>
+            <li>Erstellung von Betriebskostenabrechnungen für zurückliegende Zeiträume</li>
+            <li>Vermietung gewerblicher Einheiten</li>
+            <li>Teilnahme an Gerichtsterminen &amp; rechtlicher Korrespondenz</li>
+            <li>Erstellung von Instandhaltungsplänen</li>
+            <li>Digitalisierung &amp; Archivierung von Unterlagen</li>
+          </ul>
+        </details>
+      </article>
+
+      <h2 class="h2" style="margin-top:32px;">Leistungsverzeichnis Verwaltung Sondereigentum</h2>
+
+      <article class="card" style="margin-top:16px;">
+        <details open style="margin-top:10px;">
+          <summary class="h3" style="cursor:pointer;">1. Mietverwaltung</summary>
+          <ul>
+            <li>Abschluss und Kündigung von Mietverträgen</li>
+            <li>Einholung und Prüfung von Selbstauskünften potenzieller Mieter</li>
+            <li>Verwaltung der Mietzahlungen inkl. Verbuchung, Mahnwesen</li>
+            <li>Verwaltung und Abrechnung von Mietkautionen</li>
+            <li>Erstellung der jährlichen Betriebskostenabrechnungen für Mieter</li>
+            <li>Überwachung und ggf. Anpassung der Miete bei Mieterhöhungspotenzial (in Abstimmung mit dem Eigentümer)</li>
+            <li>Schriftwechsel mit Mietern sowie Führung einer vollständigen Mieterakte</li>
+            <li>Information des Eigentümers über relevante Vorgänge (z.&nbsp;B. Kündigungen, Streitigkeiten)</li>
+          </ul>
+        </details>
+
+        <details style="margin-top:10px;">
+          <summary class="h3" style="cursor:pointer;">2. Technische Verwaltung</summary>
+          <ul>
+            <li>Beauftragung von Instandhaltungsmaßnahmen</li>
+            <li>Koordination und Überwachung von Reparaturarbeiten</li>
+            <li>Leerstandsbetreuung bei unvermieteten Einheiten (inkl. Nebenkostenumlage)</li>
+            <li>Schadenserkennung und -meldung an Versicherungen</li>
+            <li>Notfallmanagement bei drohenden Schäden am Gemeinschaftseigentum</li>
+            <li>Koordination von Sanierungen und Modernisierungen</li>
+          </ul>
+        </details>
+
+        <details style="margin-top:10px;">
+          <summary class="h3" style="cursor:pointer;">3. Kaufmännische Verwaltung</summary>
+          <ul>
+            <li>Einrichtung eines separaten Treuhandkontos (Mieteingangs-/Bewirtschaftungskonto)</li>
+            <li>Abwicklung des Zahlungsverkehrs (z.&nbsp;B. Wohngeld, Versorger, öffentliche Abgaben)</li>
+            <li>Prüfung und Begleichung von Kosten &amp; Umlagen aus WEG-Abrechnungen</li>
+            <li>Monatliche Mietenüberweisung an den Eigentümer</li>
+            <li>Buchführung inkl. Monats- und Jahresabrechnungen</li>
+            <li>Verwaltung der behördlichen und öffentlichen Abgabenbescheide</li>
+          </ul>
+        </details>
+
+        <details style="margin-top:10px;">
+          <summary class="h3" style="cursor:pointer;">4. Vermietungsservice (optional)</summary>
+          <ul>
+            <li>Erstellung und Veröffentlichung von Inseraten</li>
+            <li>Abstimmung und Bewerbung von Mietobjekten auf Wunsch auch extern</li>
+            <li>Wohnungsübergabe/-abnahme bei Fremdvermietung</li>
+          </ul>
+        </details>
+
+        <details style="margin-top:10px;">
+          <summary class="h3" style="cursor:pointer;">5. Sonstige Leistungen</summary>
+          <ul>
+            <li>Gerichtliche und außergerichtliche Durchsetzung mietrechtlicher Ansprüche</li>
+            <li>Vertretung gegenüber Behörden, Versorgern und Dienstleistern</li>
+            <li>Regelmäßige Information des Eigentümers über rechtliche oder organisatorische Entwicklungen</li>
+            <li>Verwaltung aller objektspezifischen Verträge (Versorger, Wartung, Reinigung etc.)</li>
+          </ul>
+        </details>
+
+        <details style="margin-top:10px;">
+          <summary class="h3" style="cursor:pointer;">6. Sonderleistungen</summary>
+          <ul>
+            <li>Projektsteuerung bei Sanierungen, Modernisierungen und größeren Reparaturen</li>
+            <li>Übernahme komplexer Versicherungsfälle</li>
+            <li>Begleitung von rechtlichen Streitigkeiten inkl. Kommunikation mit Anwälten und Teilnahme an Gerichtsterminen</li>
+          </ul>
+        </details>
+      </article>
+    </div>
+  </section>
+
+  <!-- Kontakt -->
+  <section class="section section-alt" id="kontakt" aria-labelledby="kontakt-heading">
+    <div class="container grid grid-2">
+      <div>
+        <h2 class="h2" id="kontakt-heading">Kontakt</h2>
+        <p class="lead">Wir freuen uns über Ihre Anfrage.</p>
+        <div class="card" style="margin-top:12px;">
+          <p><strong>PL IMMO</strong></p>
+          <p>Einzelunternehmen · Inhaberin: <strong>Pauline Learch</strong></p>
+          <p>Dürener Str. 62a, 52249 Eschweiler</p>
+          <p>Telefon / WhatsApp: <a href="https://wa.me/4915201393868" target="_blank" rel="noopener">0152&nbsp;01393868</a></p>
+          <p>E-Mail: <a href="mailto:lersch@plimmo.de">lersch@plimmo.de</a></p>
+          <p>Instagram: <a href="https://www.instagram.com/plimmo_hausverwaltung" target="_blank" rel="noopener">@plimmo_hausverwaltung</a></p>
+          <hr style="margin:14px 0;border:none;border-top:1px solid var(--border);" />
+          <p><strong>Aufsichtsbehörde:</strong> Gewerbeamt Eschweiler</p>
+          <p><strong>Gründung:</strong> 2025</p>
+        </div>
+      </div>
+      <form class="card" onsubmit="event.preventDefault(); alert('Vielen Dank! Wir melden uns zeitnah.');" aria-label="Kontaktformular">
+        <h3 class="h3" style="margin-bottom:10px;">Nachricht senden</h3>
+        <label for="name">Name</label>
+        <input id="name" name="name" required style="width:100%;padding:10px;border:1px solid var(--input);border-radius:10px;margin:6px 0 10px;" />
+        <label for="email">E-Mail</label>
+        <input id="email" type="email" name="email" required style="width:100%;padding:10px;border:1px solid var(--input);border-radius:10px;margin:6px 0 10px;" />
+        <label for="msg">Nachricht</label>
+        <textarea id="msg" name="msg" rows="5" required style="width:100%;padding:10px;border:1px solid var(--input);border-radius:10px;margin:6px 0 12px;"></textarea>
+        <button class="btn house-button" type="submit">Senden</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Fußbereich -->
+  <footer class="section">
+    <div class="container footer" style="display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between;align-items:center;">
+      <p>© <span id="year"></span> PL IMMO – Inhaberin: Pauline Learch</p>
+      <p>Dürener Str. 62a, 52249 Eschweiler · <a href="mailto:lersch@plimmo.de">lersch@plimmo.de</a> · <a href="https://www.instagram.com/plimmo_hausverwaltung" target="_blank" rel="noopener">Instagram</a></p>
+    </div>
+  </footer>
+
+  <script>
+    // aktuelles Jahr
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
