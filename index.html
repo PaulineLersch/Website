@@ -1,0 +1,1212 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PL IMMO – Hausverwaltung in Eschweiler | Miet- & WEG-Verwaltung</title>
+    <meta name="description" content="PL IMMO – Professionelle Mietverwaltung, WEG-Verwaltung & Sondereigentumsverwaltung in Eschweiler. Inhaberin Pauline Lersch. Transparente Abrechnung & klare Kommunikation.">
+    <meta name="keywords" content="Hausverwaltung Eschweiler, Mietverwaltung, WEG-Verwaltung, Sondereigentumsverwaltung, Immobilienverwaltung, Pauline Lersch, PL IMMO">
+    <meta name="author" content="PL IMMO - Pauline Lersch">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://plimmo.de/">
+    <meta property="og:title" content="PL IMMO – Hausverwaltung in Eschweiler | Miet- & WEG-Verwaltung">
+    <meta property="og:description" content="PL IMMO – Professionelle Mietverwaltung, WEG-Verwaltung & Sondereigentumsverwaltung in Eschweiler. Inhaberin Pauline Lersch. Transparente Abrechnung & klare Kommunikation.">
+    <meta property="og:image" content="https://pixabay.com/get/ge1f2b5fc31ff7b7143e1b3d9274a337cdb648416a14aaebe7b7058642e566ad1d89023ddc9877fc7bed26eb78c45dbd81b526b20b6667ffb770a23576d0ad5b8_1280.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://plimmo.de/">
+    <meta property="twitter:title" content="PL IMMO – Hausverwaltung in Eschweiler | Miet- & WEG-Verwaltung">
+    <meta property="twitter:description" content="PL IMMO – Professionelle Mietverwaltung, WEG-Verwaltung & Sondereigentumsverwaltung in Eschweiler. Inhaberin Pauline Lersch. Transparente Abrechnung & klare Kommunikation.">
+    <meta property="twitter:image" content="https://pixabay.com/get/ge1f2b5fc31ff7b7143e1b3d9274a337cdb648416a14aaebe7b7058642e566ad1d89023ddc9877fc7bed26eb78c45dbd81b526b20b6667ffb770a23576d0ad5b8_1280.jpg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-color: #556280;
+            --text-color: #111111;
+            --background-color: #ffffff;
+            --accent-background: #f4f5f7;
+            --primary-hover: #4a5570;
+            --border-color: #e1e5e9;
+            --shadow-light: 0 2px 4px rgba(0,0,0,0.1);
+            --shadow-medium: 0 4px 6px rgba(0,0,0,0.1);
+            --shadow-strong: 0 10px 25px rgba(0,0,0,0.15);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+        }
+
+        /* Navigation */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border-color);
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            text-decoration: none;
+            letter-spacing: -0.02em;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo-img {
+            height: 40px;
+            width: auto;
+        }
+
+        .hero-logo {
+            height: 80px;
+            width: auto;
+            margin-bottom: 1rem;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-link {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 500;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .nav-link:hover {
+            color: var(--primary-color);
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: var(--primary-color);
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .mobile-menu-toggle {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 4px;
+        }
+
+        .mobile-menu-toggle span {
+            width: 25px;
+            height: 3px;
+            background-color: var(--text-color);
+            transition: all 0.3s ease;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            background: linear-gradient(135deg, rgba(85, 98, 128, 0.9), rgba(85, 98, 128, 0.7)), 
+                        url('https://pixabay.com/get/g3671e27fe8d04591831dca1a2ad8e0ea409085f5572d59f31bcac5c0406561b9f0d7237c30d60a3497fb448f3c55a94f087958db2e29b440e1eb6c7579f957e1_1280.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            letter-spacing: -0.02em;
+        }
+
+        .hero-subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+            font-weight: 400;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-hover);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-medium);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .btn-secondary:hover {
+            background-color: white;
+            color: var(--primary-color);
+            transform: translateY(-2px);
+        }
+
+        .btn-whatsapp {
+            background-color: #25D366;
+            color: white;
+        }
+
+        .btn-whatsapp:hover {
+            background-color: #20B85A;
+            transform: translateY(-2px);
+        }
+
+        /* Sections */
+        .section {
+            padding: 80px 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--text-color);
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 3rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Services Overview */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .service-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: var(--shadow-light);
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 1px solid var(--border-color);
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-strong);
+        }
+
+        .service-icon {
+            width: 60px;
+            height: 60px;
+            margin: 0 auto 1rem;
+            background-color: var(--accent-background);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+        }
+
+        .service-card h3 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+
+        /* Service Directory */
+        .service-directory {
+            background-color: var(--accent-background);
+        }
+
+        .service-list {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .service-category {
+            margin-bottom: 1.5rem;
+            background: white;
+            border-radius: 8px;
+            box-shadow: var(--shadow-light);
+            overflow: hidden;
+        }
+
+        .service-category details {
+            border: none;
+        }
+
+        .service-category summary {
+            padding: 1.5rem;
+            background-color: var(--primary-color);
+            color: white;
+            font-weight: 600;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .service-category summary:hover {
+            background-color: var(--primary-hover);
+        }
+
+        .service-details {
+            padding: 1.5rem;
+        }
+
+        .service-details ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .service-details li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid var(--border-color);
+            position: relative;
+            padding-left: 1.5rem;
+        }
+
+        .service-details li:before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+
+        .service-details li:last-child {
+            border-bottom: none;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            background: linear-gradient(135deg, var(--accent-background), white);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: start;
+        }
+
+        .contact-info {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: var(--shadow-medium);
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            gap: 1rem;
+        }
+
+        .contact-icon {
+            width: 40px;
+            height: 40px;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .contact-form {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: var(--shadow-medium);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: var(--text-color);
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+            font-family: inherit;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(85, 98, 128, 0.1);
+        }
+
+        .form-group textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: var(--text-color);
+            color: white;
+            padding: 3rem 0 1rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: white;
+        }
+
+        .footer-section p,
+        .footer-section a {
+            color: #ccc;
+            text-decoration: none;
+            line-height: 1.6;
+        }
+
+        .footer-section a:hover {
+            color: white;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 50%;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .social-link:hover {
+            background-color: var(--primary-hover);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #333;
+            padding-top: 1rem;
+            text-align: center;
+            color: #999;
+        }
+
+        /* Legal Pages */
+        .legal-section {
+            padding: 100px 0 80px;
+            background-color: var(--background-color);
+        }
+
+        .legal-content {
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+
+        .legal-content h2 {
+            color: var(--primary-color);
+            font-size: 1.8rem;
+            margin: 2rem 0 1rem;
+        }
+
+        .legal-content h3 {
+            color: var(--text-color);
+            font-size: 1.3rem;
+            margin: 1.5rem 0 1rem;
+        }
+
+        .legal-content p {
+            margin-bottom: 1rem;
+        }
+
+        .legal-content ul {
+            margin-bottom: 1rem;
+            padding-left: 2rem;
+        }
+
+        .legal-content li {
+            margin-bottom: 0.5rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: white;
+                flex-direction: column;
+                padding: 1rem 0;
+                box-shadow: var(--shadow-medium);
+            }
+
+            .nav-menu.active {
+                display: flex;
+            }
+
+            .mobile-menu-toggle {
+                display: flex;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.1rem;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .btn {
+                width: 100%;
+                max-width: 300px;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero {
+                background-attachment: scroll;
+            }
+
+            .hero-logo {
+                height: 60px;
+            }
+
+            .logo-img {
+                height: 35px;
+            }
+        }
+
+        /* Utility Classes */
+        .hidden {
+            display: none !important;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .mt-2 {
+            margin-top: 2rem;
+        }
+
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Loading animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-fadeInUp {
+            animation: fadeInUp 0.6s ease-out;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#home" class="logo">
+                <img src="pl-immo-logo.jpg" alt="PL IMMO Logo" class="logo-img">
+                PL IMMO
+            </a>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#leistungen" class="nav-link">Leistungen</a></li>
+                <li><a href="#leistungsverzeichnis" class="nav-link">Leistungsverzeichnis</a></li>
+                <li><a href="#kontakt" class="nav-link">Kontakt</a></li>
+                <li><a href="#impressum" class="nav-link">Impressum</a></li>
+                <li><a href="#datenschutz" class="nav-link">Datenschutz</a></li>
+            </ul>
+            <div class="mobile-menu-toggle" id="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <img src="pl-immo-logo.jpg" alt="PL IMMO Logo" class="hero-logo">
+            <h1>PL IMMO</h1>
+            <p class="hero-subtitle">Ihr Partner für Immobilien mit Persönlichkeit</p>
+            <div class="cta-buttons">
+                <a href="#kontakt" class="btn btn-primary">Anfrage stellen</a>
+                <a href="#leistungen" class="btn btn-secondary">Leistungen ansehen</a>
+                <a href="https://wa.me/4915201393868" class="btn btn-whatsapp" target="_blank">
+                    📱 WhatsApp-Chat starten
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Overview -->
+    <section id="leistungen" class="section">
+        <div class="container">
+            <h2 class="section-title">Unsere Leistungen</h2>
+            <p class="section-subtitle">Professionelle Immobilienverwaltung mit persönlicher Betreuung und transparenter Abrechnung</p>
+            
+            <div class="services-grid">
+                <div class="service-card" onclick="window.location.href='#mietverwaltung'" style="cursor: pointer;">
+                    <div class="service-icon">🏠</div>
+                    <h3>Mietverwaltung</h3>
+                    <p>Umfassende Betreuung Ihrer Mietobjekte mit transparenter Kommunikation und professioneller Abwicklung aller mietrechtlichen Angelegenheiten.</p>
+                </div>
+                <div class="service-card" onclick="window.location.href='#technische-verwaltung'" style="cursor: pointer;">
+                    <div class="service-icon">🔧</div>
+                    <h3>Technische Verwaltung</h3>
+                    <p>Koordination und Überwachung aller technischen Aspekte Ihrer Immobilie, von der Instandhaltung bis zur Modernisierung.</p>
+                </div>
+                <div class="service-card" onclick="window.location.href='#sondereigentum'" style="cursor: pointer;">
+                    <div class="service-icon">🏢</div>
+                    <h3>Sondereigentumsverwaltung</h3>
+                    <p>Spezialisierte Verwaltung einzelner Eigentumswohnungen mit individueller Betreuung für Kapitalanleger.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Directory -->
+    <section id="leistungsverzeichnis" class="section service-directory">
+        <div class="container">
+            <h2 class="section-title">Detailliertes Leistungsverzeichnis</h2>
+            <p class="section-subtitle">Alle unsere Dienstleistungen im Überblick</p>
+            
+            <div class="service-list">
+                <div class="service-category" id="mietverwaltung">
+                    <details>
+                        <summary>Mietverwaltung</summary>
+                        <div class="service-details">
+                            <ul>
+                                <li>Mietersuche und Mieterauswahl</li>
+                                <li>Erstellung von Mietverträgen</li>
+                                <li>Übergabe und Abnahme von Mietobjekten</li>
+                                <li>Mietinkasso und Überwachung der Mietzahlungen</li>
+                                <li>Bearbeitung von Mieterhöhungen</li>
+                                <li>Kommunikation mit Mietern</li>
+                                <li>Bearbeitung von Kündigungen</li>
+                                <li>Durchsetzung von Mietforderungen</li>
+                                <li>Verwaltung von Kautionen</li>
+                                <li>Erstellung von Betriebskostenabrechnungen</li>
+                            </ul>
+                        </div>
+                    </details>
+                </div>
+
+                <div class="service-category" id="sondereigentum">
+                    <details>
+                        <summary>Sondereigentumsverwaltung</summary>
+                        <div class="service-details">
+                            <ul>
+                                <li>Verwaltung einzelner Eigentumswohnungen</li>
+                                <li>Koordination mit WEG-Verwaltung</li>
+                                <li>Spezielle Betreuung von Kapitalanlegern</li>
+                                <li>Individuelle Beratung zu Sondereigentum</li>
+                                <li>Verwaltung von Stellplätzen und Kellerräumen</li>
+                                <li>Abrechnung sondereigentumsrelevanter Kosten</li>
+                                <li>Überwachung von Sonderumlagen</li>
+                                <li>Beratung bei Kauf und Verkauf</li>
+                            </ul>
+                        </div>
+                    </details>
+                </div>
+
+                <div class="service-category" id="technische-verwaltung">
+                    <details>
+                        <summary>Technische Verwaltung</summary>
+                        <div class="service-details">
+                            <ul>
+                                <li>Koordination von Handwerkern und Dienstleistern</li>
+                                <li>Überwachung von Reparatur- und Instandhaltungsarbeiten</li>
+                                <li>Einholung und Prüfung von Kostenvoranschlägen</li>
+                                <li>Objektbegehungen und Zustandskontrollen</li>
+                                <li>Notfallservice und Schadensmeldung</li>
+                                <li>Planung und Überwachung von Modernisierungsmaßnahmen</li>
+                                <li>Wartung technischer Anlagen</li>
+                                <li>Überwachung gesetzlicher Prüfungen</li>
+                                <li>Dokumentation aller technischen Maßnahmen</li>
+                            </ul>
+                        </div>
+                    </details>
+                </div>
+
+                <div class="service-category">
+                    <details>
+                        <summary>Kaufmännische Verwaltung</summary>
+                        <div class="service-details">
+                            <ul>
+                                <li>Führung der Hausgeldkonten</li>
+                                <li>Erstellung von Betriebskostenabrechnungen</li>
+                                <li>Externe Betriebskostenabrechnung</li>
+                                <li>Buchführung und Belegerstellung</li>
+                                <li>Überwachung von Zahlungseingängen</li>
+                                <li>Mahnwesen und Inkasso</li>
+                                <li>Steuerliche Beratung in Zusammenarbeit mit Steuerberatern</li>
+                                <li>Erstellung von Jahresabrechnungen</li>
+                                <li>Verwaltung von Rücklagen und Reserven</li>
+                                <li>Controlling und Kostenüberwachung</li>
+                                <li>Berichtswesen für Eigentümer</li>
+                            </ul>
+                        </div>
+                    </details>
+                </div>
+
+                <div class="service-category">
+                    <details>
+                        <summary>Zusätzliche Services</summary>
+                        <div class="service-details">
+                            <ul>
+                                <li>Regelmäßige Objektbegehungen</li>
+                                <li>Beratung bei Immobilienkauf und -verkauf</li>
+                                <li>Marktwertermittlung</li>
+                                <li>Vermittlung von Fachdienstleistern</li>
+                                <li>Versicherungsberatung</li>
+                                <li>Rechtliche Beratung in Zusammenarbeit mit Anwälten</li>
+                                <li>Individuelle Beratung nach Ihren Bedürfnissen</li>
+                            </ul>
+                        </div>
+                    </details>
+                </div>
+            </div>
+            
+            <div class="text-center mt-2">
+                <a href="#kontakt" class="btn btn-primary">Jetzt Kontakt aufnehmen</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="kontakt" class="section contact-section">
+        <div class="container">
+            <h2 class="section-title">Kontakt</h2>
+            <p class="section-subtitle">Nehmen Sie Kontakt mit uns auf – wir beraten Sie gerne!</p>
+            
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>Kontaktinformationen</h3>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">👤</div>
+                        <div>
+                            <strong>Inhaberin</strong><br>
+                            Pauline Lersch
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">📍</div>
+                        <div>
+                            <strong>Adresse</strong><br>
+                            Dürener Str. 62a<br>
+                            52249 Eschweiler
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">📞</div>
+                        <div>
+                            <strong>Telefon/WhatsApp</strong><br>
+                            <a href="tel:015201393868">0152 01393868</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">✉️</div>
+                        <div>
+                            <strong>E-Mail</strong><br>
+                            <a href="mailto:lersch@plimmo.de">lersch@plimmo.de</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">📱</div>
+                        <div>
+                            <strong>Social Media</strong><br>
+                            <a href="https://www.instagram.com/plimmo_hausverwaltung" target="_blank">Instagram</a>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-2">
+                        <a href="tel:015201393868" class="btn btn-primary">📞 Rückruf anfordern</a>
+                        <a href="https://wa.me/4915201393868" class="btn btn-whatsapp" target="_blank">📱 WhatsApp</a>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <h3>Nachricht senden</h3>
+                    <form action="mailto:lersch@plimmo.de" method="post" enctype="text/plain">
+                        <div class="form-group">
+                            <label for="name">Name *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">E-Mail *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Nachricht *</label>
+                            <textarea id="message" name="message" required placeholder="Beschreiben Sie bitte Ihr Anliegen..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary">Nachricht senden</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>
+                        <img src="pl-immo-logo.jpg" alt="PL IMMO Logo" style="height: 30px; vertical-align: middle; margin-right: 10px;">
+                        PL IMMO
+                    </h3>
+                    <p>Ihr Partner für professionelle Immobilienverwaltung in Eschweiler und Umgebung.</p>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/plimmo_hausverwaltung" class="social-link" target="_blank">📱</a>
+                        <a href="https://wa.me/4915201393868" class="social-link" target="_blank">💬</a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Kontakt</h3>
+                    <p>Pauline Lersch<br>
+                    Dürener Str. 62a<br>
+                    52249 Eschweiler<br>
+                    <a href="tel:015201393868">0152 01393868</a><br>
+                    <a href="mailto:lersch@plimmo.de">lersch@plimmo.de</a></p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Rechtliches</h3>
+                    <p><a href="#impressum">Impressum</a><br>
+                    <a href="#datenschutz">Datenschutzerklärung</a></p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 PL IMMO - Pauline Lersch. Alle Rechte vorbehalten.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Legal Notice -->
+    <section id="impressum" class="legal-section hidden">
+        <div class="container">
+            <div class="legal-content">
+                <h1>Impressum</h1>
+                
+                <h2>Angaben gemäß § 5 TMG</h2>
+                <p>
+                    PL IMMO<br>
+                    Inhaberin: Pauline Lersch<br>
+                    Dürener Str. 62a<br>
+                    52249 Eschweiler
+                </p>
+
+                <h2>Kontakt</h2>
+                <p>
+                    Telefon: 0152 01393868<br>
+                    E-Mail: lersch@plimmo.de
+                </p>
+
+                <h2>Berufsbezeichnung und berufsrechtliche Regelungen</h2>
+                <p>
+                    Berufsbezeichnung: Immobilienverwalterin<br>
+                    Zuständige Aufsichtsbehörde: Gewerbeamt Eschweiler<br>
+                    Verliehen in: Deutschland
+                </p>
+
+                <h2>EU-Streitschlichtung</h2>
+                <p>Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit: 
+                <a href="https://ec.europa.eu/consumers/odr/" target="_blank">https://ec.europa.eu/consumers/odr/</a>.<br>
+                Unsere E-Mail-Adresse finden Sie oben im Impressum.</p>
+
+                <h2>Verbraucherstreitbeilegung/Universalschlichtungsstelle</h2>
+                <p>Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</p>
+
+                <h2>Haftung für Inhalte</h2>
+                <p>Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht unter der Verpflichtung, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen.</p>
+                <p>Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen bleiben hiervon unberührt. Eine diesbezügliche Haftung ist jedoch erst ab dem Zeitpunkt der Kenntnis einer konkreten Rechtsverletzung möglich. Bei Bekanntwerden von entsprechenden Rechtsverletzungen werden wir diese Inhalte umgehend entfernen.</p>
+
+                <h2>Haftung für Links</h2>
+                <p>Unser Angebot enthält Links zu externen Websites Dritter, auf deren Inhalte wir keinen Einfluss haben. Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich. Die verlinkten Seiten wurden zum Zeitpunkt der Verlinkung auf mögliche Rechtsverstöße überprüft. Rechtswidrige Inhalte waren zum Zeitpunkt der Verlinkung nicht erkennbar.</p>
+                <p>Eine permanente inhaltliche Kontrolle der verlinkten Seiten ist jedoch ohne konkrete Anhaltspunkte einer Rechtsverletzung nicht zumutbar. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Links umgehend entfernen.</p>
+
+                <h2>Urheberrecht</h2>
+                <p>Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers. Downloads und Kopien dieser Seite sind nur für den privaten, nicht kommerziellen Gebrauch gestattet.</p>
+                <p>Soweit die Inhalte auf dieser Seite nicht vom Betreiber erstellt wurden, werden die Urheberrechte Dritter beachtet. Insbesondere werden Inhalte Dritter als solche gekennzeichnet. Sollten Sie trotzdem auf eine Urheberrechtsverletzung aufmerksam werden, bitten wir um einen entsprechenden Hinweis. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Inhalte umgehend entfernen.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Privacy Policy -->
+    <section id="datenschutz" class="legal-section hidden">
+        <div class="container">
+            <div class="legal-content">
+                <h1>Datenschutzerklärung</h1>
+
+                <h2>1. Datenschutz auf einen Blick</h2>
+                
+                <h3>Allgemeine Hinweise</h3>
+                <p>Die folgenden Hinweise geben einen einfachen Überblick darüber, was mit Ihren personenbezogenen Daten passiert, wenn Sie diese Website besuchen. Personenbezogene Daten sind alle Daten, mit denen Sie persönlich identifiziert werden können. Ausführliche Informationen zum Thema Datenschutz entnehmen Sie unserer unter diesem Text aufgeführten Datenschutzerklärung.</p>
+
+                <h3>Datenerfassung auf dieser Website</h3>
+                <p><strong>Wer ist verantwortlich für die Datenerfassung auf dieser Website?</strong></p>
+                <p>Die Datenverarbeitung auf dieser Website erfolgt durch den Websitebetreiber. Dessen Kontaktdaten können Sie dem Abschnitt „Hinweis zur Verantwortlichen Stelle" in dieser Datenschutzerklärung entnehmen.</p>
+
+                <p><strong>Wie erfassen wir Ihre Daten?</strong></p>
+                <p>Ihre Daten werden zum einen dadurch erhoben, dass Sie uns diese mitteilen. Hierbei kann es sich z. B. um Daten handeln, die Sie in ein Kontaktformular eingeben.</p>
+                <p>Andere Daten werden automatisch oder nach Ihrer Einwilligung beim Besuch der Website durch unsere IT-Systeme erfasst. Das sind vor allem technische Daten (z. B. Internetbrowser, Betriebssystem oder Uhrzeit des Seitenaufrufs). Die Erfassung dieser Daten erfolgt automatisch, sobald Sie diese Website betreten.</p>
+
+                <h2>2. Hosting</h2>
+                <p>Wir hosten die Inhalte unserer Website bei einem externen Dienstleister. Die personenbezogenen Daten, die auf dieser Website erfasst werden, werden auf den Servern des Hosters gespeichert. Hierbei kann es sich v. a. um IP-Adressen, Kontaktanfragen, Meta- und Kommunikationsdaten, Vertragsdaten, Kontaktdaten, Namen, Websitezugriffe und sonstige Daten, die über eine Website generiert werden, handeln.</p>
+
+                <h2>3. Allgemeine Hinweise und Pflichtinformationen</h2>
+
+                <h3>Datenschutz</h3>
+                <p>Die Betreiber dieser Seiten nehmen den Schutz Ihrer persönlichen Daten sehr ernst. Wir behandeln Ihre personenbezogenen Daten vertraulich und entsprechend den gesetzlichen Datenschutzbestimmungen sowie dieser Datenschutzerklärung.</p>
+                <p>Wenn Sie diese Website benutzen, werden verschiedene personenbezogene Daten erhoben. Personenbezogene Daten sind Daten, mit denen Sie persönlich identifiziert werden können. Die vorliegende Datenschutzerklärung erläutert, welche Daten wir erheben und wofür wir sie nutzen. Sie erläutert auch, wie und zu welchem Zweck das geschieht.</p>
+
+                <h3>Hinweis zur verantwortlichen Stelle</h3>
+                <p>Die verantwortliche Stelle für die Datenverarbeitung auf dieser Website ist:</p>
+                <p>
+                    PL IMMO<br>
+                    Pauline Lersch<br>
+                    Dürener Str. 62a<br>
+                    52249 Eschweiler<br>
+                    Telefon: 0152 01393868<br>
+                    E-Mail: lersch@plimmo.de
+                </p>
+                <p>Verantwortliche Stelle ist die natürliche oder juristische Person, die allein oder gemeinsam mit anderen über die Zwecke und Mittel der Verarbeitung von personenbezogenen Daten (z. B. Namen, E-Mail-Adressen o. Ä.) entscheidet.</p>
+
+                <h3>Speicherdauer</h3>
+                <p>Soweit innerhalb dieser Datenschutzerklärung keine speziellere Speicherdauer genannt wurde, verbleiben Ihre personenbezogenen Daten bei uns, bis der Zweck für die Datenverarbeitung entfällt. Wenn Sie ein berechtigtes Löschersuchen geltend machen oder eine Einwilligung zur Datenverarbeitung widerrufen, werden Ihre Daten gelöscht, sofern wir keine anderen rechtlich zulässigen Gründe für die Speicherung Ihrer personenbezogenen Daten haben (z. B. steuer- oder handelsrechtliche Aufbewahrungsfristen); im letztgenannten Fall erfolgt die Löschung nach Fortfall dieser Gründe.</p>
+
+                <h2>4. Datenerfassung auf dieser Website</h2>
+
+                <h3>Server-Log-Dateien</h3>
+                <p>Der Provider der Seiten erhebt und speichert automatisch Informationen in so genannten Server-Log-Dateien, die Ihr Browser automatisch an uns übermittelt. Dies sind:</p>
+                <ul>
+                    <li>Browsertyp und Browserversion</li>
+                    <li>verwendetes Betriebssystem</li>
+                    <li>Referrer URL</li>
+                    <li>Hostname des zugreifenden Rechners</li>
+                    <li>Uhrzeit der Serveranfrage</li>
+                    <li>IP-Adresse</li>
+                </ul>
+                <p>Eine Zusammenführung dieser Daten mit anderen Datenquellen wird nicht vorgenommen.</p>
+
+                <h3>Kontaktformular</h3>
+                <p>Wenn Sie uns per Kontaktformular Anfragen zukommen lassen, werden Ihre Angaben aus dem Anfrageformular inklusive der von Ihnen dort angegebenen Kontaktdaten zwecks Bearbeitung der Anfrage und für den Fall von Anschlussfragen bei uns gespeichert. Diese Daten geben wir nicht ohne Ihre Einwilligung weiter.</p>
+
+                <h3>Anfrage per E-Mail, Telefon oder Telefax</h3>
+                <p>Wenn Sie uns per E-Mail, Telefon oder Telefax kontaktieren, wird Ihre Anfrage inklusive aller daraus hervorgehenden personenbezogenen Daten (Name, Anfrage) zum Zwecke der Bearbeitung Ihres Anliegens bei uns gespeichert und verarbeitet. Diese Daten geben wir nicht ohne Ihre Einwilligung weiter.</p>
+
+                <h2>5. Externe Inhalte</h2>
+
+                <h3>Verwendung von Bildern externer Anbieter</h3>
+                <p>Diese Website verwendet Bilder von externen Anbietern wie Unsplash und Pixabay. Beim Laden dieser Bilder wird Ihre IP-Adresse an den jeweiligen Anbieter übertragen. Wir haben keinen Einfluss auf die Datenverarbeitung durch diese Anbieter.</p>
+
+                <h2>6. Ihre Rechte</h2>
+                <p>Sie haben jederzeit das Recht:</p>
+                <ul>
+                    <li>Auskunft über Ihre bei uns gespeicherten personenbezogenen Daten und deren Verarbeitung zu erhalten</li>
+                    <li>Berichtigung unrichtiger personenbezogener Daten zu verlangen</li>
+                    <li>Löschung Ihrer bei uns gespeicherten personenbezogenen Daten zu verlangen</li>
+                    <li>Einschränkung der Datenverarbeitung zu verlangen</li>
+                    <li>Widerspruch gegen die Verarbeitung Ihrer Daten zu erheben</li>
+                    <li>Datenübertragbarkeit zu verlangen</li>
+                </ul>
+                <p>Wenn Sie eine Einwilligung zur Datenverarbeitung erteilt haben, können Sie diese jederzeit widerrufen. Alle Anfragen richten Sie bitte an: lersch@plimmo.de</p>
+
+                <h2>7. Datensicherheit</h2>
+                <p>Wir verwenden innerhalb des Website-Besuchs das verbreitete SSL-bzw. TLS-Verfahren (Secure Socket Layer/Transport Layer Security) in Verbindung mit der jeweils höchsten Verschlüsselungsstufe, die von Ihrem Browser unterstützt wird. In der Regel handelt es sich dabei um eine 256-Bit-Verschlüsselung. Falls Ihr Browser keine 256-Bit-Verschlüsselung unterstützt, greifen wir stattdessen auf 128-Bit-v3-Technologie zurück.</p>
+
+                <h2>8. Änderung unserer Datenschutzbestimmungen</h2>
+                <p>Wir behalten uns vor, diese Datenschutzerklärung anzupassen, damit sie stets den aktuellen rechtlichen Anforderungen entspricht oder um Änderungen unserer Leistungen in der Datenschutzerklärung umzusetzen. Für Ihren erneuten Besuch gilt dann die neue Datenschutzerklärung.</p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+        const navMenu = document.getElementById('nav-menu');
+
+        mobileMenuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+            });
+        });
+
+        // Service card click handlers
+        document.querySelectorAll('.service-card[onclick]').forEach(card => {
+            card.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('onclick').match(/#([^']+)/)[1];
+                const target = document.getElementById(targetId);
+                if (target) {
+                    // Open the details element
+                    const details = target.querySelector('details');
+                    if (details) {
+                        details.open = true;
+                    }
+                    // Scroll to target with offset for navbar
+                    const offsetTop = target.offsetTop - 80;
+                    window.scrollTo({
+                        top: offsetTop,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    // Hide all sections first
+                    document.querySelectorAll('.legal-section').forEach(section => {
+                        section.classList.add('hidden');
+                    });
+                    
+                    // Show target section if it's a legal section
+                    if (target.classList.contains('legal-section')) {
+                        target.classList.remove('hidden');
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    } else {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                }
+            });
+        });
+
+        // Handle navigation for legal pages
+        document.addEventListener('DOMContentLoaded', function() {
+            // Check if page was loaded with a hash
+            const hash = window.location.hash;
+            if (hash === '#impressum' || hash === '#datenschutz') {
+                document.querySelectorAll('.legal-section').forEach(section => {
+                    section.classList.add('hidden');
+                });
+                const targetSection = document.querySelector(hash);
+                if (targetSection) {
+                    targetSection.classList.remove('hidden');
+                }
+            }
+        });
+
+        // Add scroll effect to navbar
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 100) {
+                navbar.style.background = 'rgba(255, 255, 255, 0.98)';
+                navbar.style.boxShadow = '0 2px 20px rgba(0,0,0,0.1)';
+            } else {
+                navbar.style.background = 'rgba(255, 255, 255, 0.95)';
+                navbar.style.boxShadow = 'none';
+            }
+        });
+
+        // Add animation to elements when they come into view
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fadeInUp');
+                }
+            });
+        }, observerOptions);
+
+        // Observe service cards and contact elements
+        document.querySelectorAll('.service-card, .contact-info, .contact-form').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Form handling for better user experience
+        const contactForm = document.querySelector('form[action^="mailto:"]');
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(e) {
+                const name = document.getElementById('name').value;
+                const email = document.getElementById('email').value;
+                const message = document.getElementById('message').value;
+                
+                // Create a formatted email body
+                const emailBody = `Name: ${name}\nE-Mail: ${email}\n\nNachricht:\n${message}`;
+                
+                // Update the form action with the formatted body
+                this.action = `mailto:lersch@plimmo.de?subject=Kontaktanfrage von ${name}&body=${encodeURIComponent(emailBody)}`;
+            });
+        }
+    </script>
+</body>
+</html>
