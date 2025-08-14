@@ -1,0 +1,41 @@
+Prompt:
+
+Bitte erweitere die bestehende HTML-Datei um eine neue, klar erkennbare Rubrik zur Unternehmervorstellung von Pauline Lersch.
+
+Die Rubrik soll folgenden Titel tragen:
+„Über die Gründerin – Pauline Lersch“
+
+Diese Rubrik soll in der Navigation mit einem eigenen Button verlinkt sein (z. B. als Über uns oder Die Gründerin). Der Link soll in der Hauptnavigation eingebunden sein – nicht zu prominent, aber gut auffindbar zwischen den anderen Menüpunkten.
+
+Die Rubrik soll ein eigener Bereich (Section) sein, der sich inhaltlich und optisch leicht abhebt – etwa durch einen weich abgesetzten Hintergrundton (z. B. ein leicht aufgehelltes #f9f9f9 oder #eef1f5) und viel Weißraum. Die Gestaltung muss aber weiterhin zum Stil der PL IMMO Website passen (modern, klar, sachlich, hochwertig).
+
+Der folgende Text soll vollständig eingebunden werden, gut lesbar, gerne in zwei Spalten oder mit geschickt platzierten Absätzen für bessere Struktur. Verwende eine serifenlose, moderne Schriftart.
+
+⸻
+
+Text:
+Neue Hausverwaltung mit Herz: Pauline Lersch gründet PL IMMO in Eschweiler
+Mit PL IMMO geht 2025 eine neue Hausverwaltung in Eschweiler an den Start – gegründet von Pauline Lersch, ausgebildete Bankkauffrau und Immobilienkauffrau. Mit Sitz in der Dürener Straße 62a betreut sie als One-Woman-Show Eigentümer, Mieter und Wohnanlagen in Eschweiler und Umgebung – persönlich, professionell und mit viel Herzblut.
+„Ich bin in einem selbstständigen Haus groß geworden“, erzählt die Gründerin. „Die persönliche und freundschaftliche Art in der Firma meiner Familie hat mich stark geprägt – genau diese Atmosphäre möchte ich auch in meiner eigenen Firma leben.“
+Nach einigen Jahren Berufserfahrung als angestellte Hausverwalterin entschied sich Pauline Lersch bewusst für die Selbstständigkeit. „Ich wollte eigenverantwortlich arbeiten, flexibel reagieren und Entscheidungen direkt mit meinen Kunden treffen. So habe ich das Arbeiten von klein auf gelernt.“
+PL IMMO bietet klassische Hausverwaltungsleistungen an – von Mietwohnanlagen bis zur Sondereigentumsverwaltung. Dabei setzt Pauline Lersch auf eine Kombination aus fachlicher Kompetenz und menschlicher Nähe: „Mir ist wichtig, eine professionelle Bindung zu Eigentümern aufzubauen, aber dennoch eine entspannte, freundliche Atmosphäre zu wahren.“
+Erreichbarkeit spielt für sie eine zentrale Rolle. Ob Eigentümer oder Mieter – Anliegen sollen schnell aufgenommen und unkompliziert bearbeitet werden. „Ich bin jederzeit direkt erreichbar – per Telefon, E-Mail oder WhatsApp.“
+Auch einem zukünftigen Wachstum steht sie offen gegenüber – ohne dabei ihre persönliche Linie zu verlieren: „Digitalisierung ist für mich kein Fremdwort. Ich bin bereit für neue Möglichkeiten, möchte aber immer den direkten Draht zu meinen Kunden beibehalten.“
+Trotz der Herausforderungen einer Neugründung spürt Pauline Lersch einen klaren Bedarf: „Ich merke, dass viele Eigentümer in Eschweiler eine zuverlässige, nahbare Verwaltung suchen. Als Eschweiler Mädchen ist es für mich selbstverständlich, in meiner Heimat zu bleiben und die lokale Kultur auch in der Arbeitswelt weiterzutragen.“
+
+Bildintegration:
+Füge zu dieser Rubrik zwei Bilder ein, beide direkt per Base64 eingebettet.
+	1.	PHOTO-2025-08-07-15-08-24.jpeg – Portrait von Pauline Lersch → links oder über dem Text, prominent aber nicht überdimensioniert.
+	2.	PHOTO-2025-08-07-15-13-29.jpeg – Szene am Tisch mit Unterlagen → dezenter im Hintergrund oder mehrfach wiederverwendet, z. B. leicht transparent im Hintergrund dieser Rubrik als stilistische Ergänzung (Skizzencharakter).
+
+Die Bildformate sollen responsiv sein (max-width: 100%), idealerweise im flexiblen Grid oder CSS-Grid-Layout. Auf mobilen Geräten soll alles untereinander fließen.
+
+Achte darauf, dass auch mit dem vorhandenen SVG-Hintergrund der Text und die Bilder weiterhin gut sichtbar und lesbar bleiben.
+
+Verwende außerdem beschreibende alt-Attribute für beide Bilder und achte auf kurze Ladezeit (Bildkomprimierung in Base64 optimieren).
+
+Wichtig:
+	•	Kein externer Bild- oder CSS-Import
+	•	Der neue Abschnitt muss sauber in die bestehende HTML-Datei integriert werden
+	•	Der neue Button in der Navigation soll beim Klick zum Abschnitt scrollen (href="#ueber" o. ä.)
+	•	Es darf keine optische Überladung oder Textblockade entstehen – Fokus auf Klarheit, Hochwertigkeit und Professionalität
