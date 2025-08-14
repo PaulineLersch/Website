@@ -1,0 +1,44 @@
+Prompt:
+
+Bitte erweitere und überarbeite die bestehende HTML-Datei mit folgenden klaren Anforderungen, um den Bereich „Pauline Lersch“ als persönliche Unternehmervorstellung professionell, modern und authentisch umzusetzen.
+
+⸻
+
+1. Neue Rubrik „Pauline Lersch“ statt „Die Gründerin“:
+	•	Erstelle eine neue Rubrik mit dem Titel „Pauline Lersch“.
+	•	Binde diesen Menüpunkt oben in die Navigation ein (nicht zu auffällig, aber klar anklickbar).
+	•	Die Verlinkung erfolgt über einen Anker-Link (href="#pauline-lersch" o. ä.) zu einem separaten Abschnitt auf der Seite.
+
+⸻
+
+2. Sprachliche Ausrichtung auf One-Woman-Show:
+	•	Passe sämtliche Texte in dieser Rubrik so an, dass deutlich wird: Pauline Lersch ist alleinige Inhaberin und Ansprechpartnerin.
+	•	Verwende Ich-Formulierungen, z. B.:
+	•	„Ich betreue Ihre Immobilie persönlich“
+	•	„Nehmen Sie gerne Kontakt mit mir auf“
+	•	„Ich bin Ihre direkte Ansprechpartnerin“
+	•	Vermeide jegliche Formulierungen, die ein Team, ein „Wir“ oder eine Firma mit mehreren Mitarbeitenden suggerieren.
+	•	Die Tonalität soll persönlich, verbindlich und professionell sein – mit Fokus auf Nähe, Verlässlichkeit und Eigenverantwortung.
+
+⸻
+
+3. Textliche Inhalte (Unternehmervorstellung):
+	•	Verwende den gelieferten Pressetext vollständig (siehe oben), aber passe auch dort alle Stellen an, an denen „wir“ oder „uns“ verwendet wird. Die gesamte Rubrik soll in der Ich-Perspektive bleiben.
+	•	Der Text soll in Blöcke/Absätze gegliedert werden und auf großen Bildschirmen ggf. in zwei Spalten erscheinen.
+
+⸻
+
+4. Bildverwendung:
+	•	Verwende ausschließlich das Portrait-Foto von Pauline Lersch (PHOTO-2025-08-07-15-08-24.jpeg).
+	•	Binde es gut sichtbar in den Abschnitt ein – links oder über dem Text, je nach Viewport.
+	•	Das Bild muss per Base64 eingebettet werden, kein externer Link.
+	•	Verwende ein alt-Attribut wie Portrait von Pauline Lersch.
+	•	Entferne das Foto mit den Händen und Unterlagen (PHOTO-2025-08-07-15-13-29.jpeg) vollständig – es soll nicht mehr eingebunden oder referenziert werden.
+
+⸻
+
+5. Technische Umsetzung:
+	•	Der gesamte Abschnitt soll modern und leicht gestaltet sein – mit heller Hintergrundfarbe (z. B. #f8f9fb) zur visuellen Abgrenzung.
+	•	Das Layout muss vollständig responsiv sein. Auf kleinen Geräten sollen Text und Bild untereinander erscheinen.
+	•	Alle Inhalte (HTML, CSS, Bilddaten) müssen in einer einzigen HTML-Datei enthalten sein. Keine externen Dateien oder Imports (auch keine Fonts oder Icons).
+	•	Bestehende Hintergrundmuster (Base64-SVG) dürfen beibehalten werden, müssen aber so eingebunden bleiben, dass der Text darüber gut lesbar ist.

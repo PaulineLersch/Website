@@ -1,0 +1,74 @@
+Anweisung an die KI:
+Erstelle mir eine vollständige, professionelle und DSGVO-konforme index.html-Datei (nur eine einzige HTML-Datei, keine externen CSS/JS-Dateien), die das komplette Corporate Design und alle Inhalte einer Immobilienverwaltungs-Website für PL IMMO enthält.
+
+Alle folgenden Anforderungen sind verbindlich:
+
+1. Allgemeines & Branding
+	•	Hauptfarbe: #556280 (Corporate Blau)
+	•	Textfarbe: #111111, Hintergrund: Weiß (#ffffff), Akzentflächen: #f4f5f7
+	•	Logo PL IMMO muss eingebettet werden (kein Platzhaltertext).
+	•	Verwende moderne, klare, gut lesbare Schriftart (System-UI oder Google Fonts „Inter“ oder „Open Sans“).
+	•	Design modern, klar, mobiloptimiert (responsive).
+	•	Stockbilder (Unsplash, Pexels o.ä.) dezent als Hintergrundbilder oder Abschnittsheader einbinden – keine täuschende Objektfotografie.
+
+2. Seitenstruktur
+	•	Eine Startseite mit Navigation, Hero-Section, Leistungen, dynamischem Leistungsverzeichnis, Kontaktformular, Footer.
+	•	Impressum und Datenschutzerklärung als eigene Unterseiten innerhalb der HTML-Datei (über <section> mit eigener ID erreichbar, Navigation verlinkt dorthin).
+	•	Navigation: „Leistungen“, „Leistungsverzeichnis“, „Kontakt“, „Impressum“, „Datenschutz“.
+	•	Footer mit Kontaktdaten, Social-Media-Links, Schnellzugriff auf Impressum & Datenschutz.
+
+3. Inhalte
+	•	Hero-Section: Firmenname, Claim („Ihr Partner für Immobilien mit Persönlichkeit“), CTA-Buttons:
+	•	„Anfrage stellen“ → springt zu Kontakt
+	•	„Leistungen ansehen“ → springt zu Leistungen
+	•	„WhatsApp-Chat starten“ → https://wa.me/4915201393868
+	•	Leistungen-Überblick (3 Spalten mit Icons/Text):
+	•	Mietverwaltung
+	•	Technische Verwaltung
+	•	Kaufmännische Verwaltung
+	•	Leistungsverzeichnis:
+	•	Inhalte aus den hochgeladenen Dokumenten vollständig übernehmen ￼.
+	•	Umsetzung als aufklappbare <details>-Elemente.
+	•	Am Ende des Leistungsverzeichnisses Call-to-Action-Button („Jetzt Kontakt aufnehmen“) einfügen.
+	•	Kontaktbereich:
+	•	Firmenname, Adresse, Inhaberin, E-Mail, Telefon/WhatsApp, Instagram-Link
+	•	Kontaktformular mit Feldern: Name, E-Mail, Nachricht (per mailto: an lersch@plimmo.de)
+	•	Rückruf-Anfrage-Button (tel:-Link zu 015201393868)
+	•	Impressum:
+	•	Vollständige Pflichtangaben (§ 5 TMG)
+	•	Aufsichtsbehörde, Berufsrecht, EU-Streitschlichtung, Haftungsausschlüsse, Urheberrecht.
+	•	Datenschutzerklärung:
+	•	Vollständig gemäß DSGVO (Verantwortliche Stelle, Hosting, Kontaktaufnahme, Cookies/Tracking, Rechte Betroffener, Datensicherheit, Änderungen).
+	•	Spezieller Hinweis: Keine nicht notwendigen Cookies/Trackingtools, Nutzung von mailto, Verwendung von externen Bildern (Unsplash) erwähnen.
+
+4. Technik & Gestaltung
+	•	Komplett in einer einzigen index.html-Datei mit <style> und <script> integriert.
+	•	Responsive Design (Mobile-First).
+	•	SEO-Optimierung:
+	•	Title-Tag: „PL IMMO – Hausverwaltung in Eschweiler | Miet- & WEG-Verwaltung“
+	•	Meta Description: „PL IMMO – Professionelle Mietverwaltung, WEG-Verwaltung & Sondereigentumsverwaltung in Eschweiler. Inhaberin Pauline Lersch. Transparente Abrechnung & klare Kommunikation.“
+	•	OpenGraph-Tags für Social Media.
+	•	Saubere Überschriftenstruktur (H1 nur einmal, H2/H3 logisch).
+	•	Call-to-Actions optisch hervorgehoben.
+	•	Dynamische Elemente (Leistungsverzeichnis aufklappbar).
+	•	Barrierefreiheit: alt-Texte für Bilder, sinnvolle aria-Labels.
+
+5. Inhalte (fixe Daten)
+	•	Firmenname: PL IMMO
+	•	Inhaberin: Pauline Lersch
+	•	Adresse: Dürener Str. 62a, 52249 Eschweiler
+	•	Telefon/WhatsApp: 0152 01393868
+	•	E-Mail: lersch@plimmo.de
+	•	Instagram: https://www.instagram.com/plimmo_hausverwaltung
+	•	Gründung: 2025
+	•	Aufsichtsbehörde: Gewerbeamt Eschweiler
+	•	Zielgruppen: Privatkunden (Eigentümer einzelner Wohnungen), Wohnungseigentümergemeinschaften, Kapitalanleger
+	•	Dienstleistungen: Mietverwaltung, WEG-Verwaltung, Sondereigentumsverwaltung, Betriebskostenabrechnung, Kommunikation mit Eigentümern/Mietern, Handwerkerkoordination, Objektbegehungen
+
+6. Umsetzung
+	•	Der HTML-Code muss sofort lauffähig sein, ohne externe Abhängigkeiten.
+	•	Alle Texte bitte korrekt mit Umlauten schreiben.
+	•	Keine Platzhaltertexte, stattdessen echte Inhalte aus den Vorgaben.
+	•	Keine unnötigen Beispielbilder mit Wasserzeichen.
+	•	Stockbilder lizenzfrei von Unsplash/Pexels als URL direkt eingebunden.
+	•	Abschließende Kontrolle, dass alle Links und Anker funktionieren.

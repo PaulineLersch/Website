@@ -1,0 +1,27 @@
+Bitte folgende präzise Änderung umsetzen – der „Aktuelle Inserate“-Button darf nur im Hero-Bereich bleiben und muss im Header fehlen. Falls nötig, verwende eindeutige Kennzeichnungen, um Verwechslungen zu vermeiden.
+	1.	Eindeutige Bereichsdefinitionen
+
+	•	Header (weiße Leiste, sticky/fixed, Höhe ca. 70–80 px, Hintergrund #FFFFFF): links Logo, rechts die Menülinks „Leistungen“, „Leistungsverzeichnis“, „Kontakt“, „Impressum“, „Datenschutz“. In diesem Bereich darf kein „Aktuelle Inserate“-Button existieren.
+	•	Hero-Bereich (blauer Hintergrund direkt unter dem Header, mit großem PL‑IMMO‑Logo): darunter drei Buttons nebeneinander: „Anfrage stellen“, „Leistungen ansehen“, „Aktuelle Inserate“ (grün).
+
+	2.	Konkrete Anweisung (IDs/Kennzeichnungen setzen)
+
+	•	Weise dem (zu entfernenden) Header-Button die Kennzeichnung data-role=“header-inserate-btn” zu (falls vorhanden) und entferne ausschließlich dieses Element aus dem DOM/Template.
+	•	Weise dem (bestehenden) Hero-Button die Kennzeichnung data-role=“hero-inserate-btn” zu und stelle sicher, dass dieses Element sichtbar bleibt (nicht gelöscht, nicht hidden, keine display:none/visibility:hidden).
+	•	Wichtig: Falls aktuell beide Buttons dasselbe Partial/Component nutzen, entkopple sie (separate Instanz/Vorlage). Header-Variante löschen; Hero-Variante behalten.
+
+	3.	Verhalten & Design
+
+	•	Header: Nach Entfernung automatisch neu ausrichten, sodass keine Lücke rechts entsteht; nur Logo + 5 Menülinks bleiben.
+	•	Hero-Button „Aktuelle Inserate“ (data-role=“hero-inserate-btn”) muss bestehen bleiben und unverändert funktionieren: Link https://www.kleinanzeigen.de/s-bestandsliste.html?userId=152972347 in neuem Tab/Fenster öffnen; aria-label „Aktuelle Inserate auf eBay Kleinanzeigen“.
+	•	Optik Hero-Button beibehalten: Breite ca. 180–220 px, Höhe 50–55 px, Eckenradius 8–10 px, Grundfarbe Hellgrün #A6E000 mit leichtem Verlauf zu #8BC500, optional 1–2 px Rand #6FA000, Schrift Sans Serif (Open Sans/Roboto), fett, 16–18 px, Schriftfarbe #006699, Hover leicht dunkler (#8BC500 → #6FA000), Cursor: Pointer.
+	•	Anordnung im Hero: Drei Buttons auf einer Linie, gleiche Höhe, gleiche Außenabstände (mind. 16–20 px), Reihenfolge: „Anfrage stellen“ – „Leistungen ansehen“ – „Aktuelle Inserate“ (rechts).
+	•	Mobil: Header ohne grünen Button. Im Hero die drei Buttons untereinander (volle Breite), Reihenfolge wie oben, vertikaler Abstand 16–20 px.
+
+	4.	Schutz gegen erneutes Entfernen
+
+	•	Füge eine Explizit-Regel hinzu: „Element mit data-role="hero-inserate-btn" darf nicht gelöscht oder ausgeblendet werden; Änderungen betreffen nur Element mit data-role="header-inserate-btn".“
+	•	Prüfe nach Deployment:
+	•	Im Header ist kein „Aktuelle Inserate“-Button sichtbar.
+	•	Im Hero ist der grüne „Aktuelle Inserate“-Button sichtbar, klickbar und führt zum genannten Link.
+	•	Beim Scrollen bleibt der Header sauber ausgerichtet; der Hero-Button bleibt unverändert erhalten.
