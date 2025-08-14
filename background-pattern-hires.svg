@@ -1,0 +1,192 @@
+<svg width="3000" height="3000" viewBox="0 0 3000 3000" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- High-resolution gradient definitions -->
+    <linearGradient id="primaryGradHR" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#556280;stop-opacity:0.03"/>
+      <stop offset="100%" style="stop-color:#556280;stop-opacity:0.08"/>
+    </linearGradient>
+    
+    <linearGradient id="accentGradHR" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#556280;stop-opacity:0.02"/>
+      <stop offset="100%" style="stop-color:#556280;stop-opacity:0.06"/>
+    </linearGradient>
+    
+    <radialGradient id="circleGradHR" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#556280;stop-opacity:0.01"/>
+      <stop offset="100%" style="stop-color:#556280;stop-opacity:0.04"/>
+    </radialGradient>
+    
+    <!-- High-res pattern filters -->
+    <filter id="softShadowHR" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="8" dy="8" stdDeviation="15" flood-color="#556280" flood-opacity="0.02"/>
+    </filter>
+  </defs>
+  
+  <!-- Background waves scaled to 3000x3000 -->
+  <path d="M0,2400 Q750,2250 1500,2400 T3000,2400 L3000,3000 L0,3000 Z" 
+        fill="url(#primaryGradHR)" opacity="0.3"/>
+  
+  <path d="M0,2625 Q1125,2475 2250,2625 T4500,2625 L4500,3000 L0,3000 Z" 
+        fill="url(#accentGradHR)" opacity="0.2"/>
+  
+  <!-- Large-scale building silhouettes -->
+  <g opacity="0.15">
+    <!-- Row 1 buildings -->
+    <rect x="375" y="1875" width="225" height="600" fill="#556280" opacity="0.1" filter="url(#softShadowHR)"/>
+    <rect x="412.5" y="1800" width="150" height="75" fill="#556280" opacity="0.08"/>
+    
+    <rect x="900" y="1650" width="187.5" height="825" fill="#556280" opacity="0.12" filter="url(#softShadowHR)"/>
+    <rect x="937.5" y="1575" width="112.5" height="75" fill="#556280" opacity="0.09"/>
+    
+    <rect x="1350" y="1950" width="262.5" height="525" fill="#556280" opacity="0.1" filter="url(#softShadowHR)"/>
+    <polygon points="1350,1950 1481.25,1837.5 1612.5,1950" fill="#556280" opacity="0.08"/>
+    
+    <rect x="2100" y="1800" width="210" height="675" fill="#556280" opacity="0.11" filter="url(#softShadowHR)"/>
+    <rect x="2137.5" y="1725" width="135" height="75" fill="#556280" opacity="0.07"/>
+    
+    <rect x="2550" y="2025" width="240" height="450" fill="#556280" opacity="0.09" filter="url(#softShadowHR)"/>
+    <polygon points="2550,2025 2670,1912.5 2790,2025" fill="#556280" opacity="0.06"/>
+    
+    <!-- Row 2 buildings -->
+    <rect x="225" y="1500" width="180" height="450" fill="#556280" opacity="0.08" filter="url(#softShadowHR)"/>
+    <polygon points="225,1500 315,1425 405,1500" fill="#556280" opacity="0.05"/>
+    
+    <rect x="750" y="1350" width="195" height="600" fill="#556280" opacity="0.1" filter="url(#softShadowHR)"/>
+    <rect x="787.5" y="1275" width="120" height="75" fill="#556280" opacity="0.07"/>
+    
+    <rect x="1200" y="1425" width="225" height="525" fill="#556280" opacity="0.11" filter="url(#softShadowHR)"/>
+    <rect x="1237.5" y="1350" width="150" height="75" fill="#556280" opacity="0.08"/>
+    
+    <rect x="1800" y="1575" width="210" height="375" fill="#556280" opacity="0.09" filter="url(#softShadowHR)"/>
+    <polygon points="1800,1575 1905,1500 2010,1575" fill="#556280" opacity="0.06"/>
+    
+    <rect x="2400" y="1200" width="255" height="750" fill="#556280" opacity="0.12" filter="url(#softShadowHR)"/>
+    <rect x="2437.5" y="1125" width="180" height="75" fill="#556280" opacity="0.09"/>
+    
+    <!-- Row 3 buildings -->
+    <rect x="150" y="900" width="165" height="375" fill="#556280" opacity="0.07" filter="url(#softShadowHR)"/>
+    <rect x="172.5" y="825" width="120" height="75" fill="#556280" opacity="0.05"/>
+    
+    <rect x="525" y="750" width="195" height="525" fill="#556280" opacity="0.09" filter="url(#softShadowHR)"/>
+    <polygon points="525,750 622.5,675 720,750" fill="#556280" opacity="0.06"/>
+    
+    <rect x="975" y="825" width="240" height="450" fill="#556280" opacity="0.1" filter="url(#softShadowHR)"/>
+    <rect x="1012.5" y="750" width="165" height="75" fill="#556280" opacity="0.07"/>
+    
+    <rect x="1575" y="675" width="180" height="600" fill="#556280" opacity="0.11" filter="url(#softShadowHR)"/>
+    <rect x="1597.5" y="600" width="135" height="75" fill="#556280" opacity="0.08"/>
+    
+    <rect x="2025" y="975" width="225" height="300" fill="#556280" opacity="0.08" filter="url(#softShadowHR)"/>
+    <polygon points="2025,975 2137.5,900 2250,975" fill="#556280" opacity="0.05"/>
+    
+    <rect x="2700" y="600" width="270" height="675" fill="#556280" opacity="0.12" filter="url(#softShadowHR)"/>
+    <rect x="2737.5" y="525" width="195" height="75" fill="#556280" opacity="0.09"/>
+  </g>
+  
+  <!-- High-resolution window patterns -->
+  <g opacity="0.08">
+    <!-- Building 1 windows -->
+    <rect x="450" y="2025" width="30" height="45" fill="#556280"/>
+    <rect x="510" y="2025" width="30" height="45" fill="#556280"/>
+    <rect x="450" y="2137.5" width="30" height="45" fill="#556280"/>
+    <rect x="510" y="2137.5" width="30" height="45" fill="#556280"/>
+    <rect x="450" y="2250" width="30" height="45" fill="#556280"/>
+    <rect x="510" y="2250" width="30" height="45" fill="#556280"/>
+    
+    <!-- Building 2 windows -->
+    <rect x="975" y="1800" width="22.5" height="37.5" fill="#556280"/>
+    <rect x="1020" y="1800" width="22.5" height="37.5" fill="#556280"/>
+    <rect x="975" y="1875" width="22.5" height="37.5" fill="#556280"/>
+    <rect x="1020" y="1875" width="22.5" height="37.5" fill="#556280"/>
+    <rect x="975" y="1950" width="22.5" height="37.5" fill="#556280"/>
+    <rect x="1020" y="1950" width="22.5" height="37.5" fill="#556280"/>
+    <rect x="975" y="2025" width="22.5" height="37.5" fill="#556280"/>
+    <rect x="1020" y="2025" width="22.5" height="37.5" fill="#556280"/>
+    <rect x="975" y="2100" width="22.5" height="37.5" fill="#556280"/>
+    <rect x="1020" y="2100" width="22.5" height="37.5" fill="#556280"/>
+    
+    <!-- Building 3 windows -->
+    <rect x="1425" y="2100" width="37.5" height="52.5" fill="#556280"/>
+    <rect x="1500" y="2100" width="37.5" height="52.5" fill="#556280"/>
+    <rect x="1425" y="2212.5" width="37.5" height="52.5" fill="#556280"/>
+    <rect x="1500" y="2212.5" width="37.5" height="52.5" fill="#556280"/>
+    <rect x="1425" y="2325" width="37.5" height="52.5" fill="#556280"/>
+    <rect x="1500" y="2325" width="37.5" height="52.5" fill="#556280"/>
+    
+    <!-- Additional windows for other buildings -->
+    <rect x="2175" y="1950" width="30" height="45" fill="#556280"/>
+    <rect x="2235" y="1950" width="30" height="45" fill="#556280"/>
+    <rect x="2175" y="2062.5" width="30" height="45" fill="#556280"/>
+    <rect x="2235" y="2062.5" width="30" height="45" fill="#556280"/>
+    <rect x="2175" y="2175" width="30" height="45" fill="#556280"/>
+    <rect x="2235" y="2175" width="30" height="45" fill="#556280"/>
+    
+    <rect x="2625" y="2137.5" width="30" height="45" fill="#556280"/>
+    <rect x="2685" y="2137.5" width="30" height="45" fill="#556280"/>
+    <rect x="2625" y="2250" width="30" height="45" fill="#556280"/>
+    <rect x="2685" y="2250" width="30" height="45" fill="#556280"/>
+  </g>
+  
+  <!-- Large geometric accent elements -->
+  <g opacity="0.06">
+    <!-- Subtle circles for depth -->
+    <circle cx="750" cy="750" r="300" fill="url(#circleGradHR)"/>
+    <circle cx="2250" cy="1125" r="262.5" fill="url(#circleGradHR)"/>
+    <circle cx="1125" cy="600" r="187.5" fill="url(#circleGradHR)"/>
+    <circle cx="450" cy="450" r="225" fill="url(#circleGradHR)"/>
+    <circle cx="2700" cy="375" r="150" fill="url(#circleGradHR)"/>
+    
+    <!-- Abstract geometric shapes -->
+    <polygon points="600,450 900,450 750,300" fill="#556280" opacity="0.04"/>
+    <polygon points="1875,675 2175,675 2025,525" fill="#556280" opacity="0.05"/>
+    <polygon points="2400,300 2700,300 2550,150" fill="#556280" opacity="0.03"/>
+    <polygon points="300,1200 600,1200 450,1050" fill="#556280" opacity="0.04"/>
+    <polygon points="1350,375 1650,375 1500,225" fill="#556280" opacity="0.05"/>
+    
+    <!-- Rectangular accent elements -->
+    <rect x="225" y="1125" width="600" height="15" fill="#556280" opacity="0.06"/>
+    <rect x="1500" y="900" width="450" height="15" fill="#556280" opacity="0.05"/>
+    <rect x="2400" y="1350" width="525" height="15" fill="#556280" opacity="0.04"/>
+    <rect x="75" y="1800" width="675" height="15" fill="#556280" opacity="0.05"/>
+    <rect x="1800" y="450" width="750" height="15" fill="#556280" opacity="0.06"/>
+  </g>
+  
+  <!-- Subtle diagonal lines scaled up -->
+  <g opacity="0.03">
+    <line x1="0" y1="0" x2="750" y2="750" stroke="#556280" stroke-width="7.5"/>
+    <line x1="1125" y1="0" x2="1875" y2="750" stroke="#556280" stroke-width="7.5"/>
+    <line x1="2250" y1="0" x2="3000" y2="750" stroke="#556280" stroke-width="7.5"/>
+    <line x1="0" y1="1125" x2="750" y2="1875" stroke="#556280" stroke-width="7.5"/>
+    <line x1="2250" y1="1125" x2="3000" y2="1875" stroke="#556280" stroke-width="7.5"/>
+    <line x1="0" y1="2250" x2="750" y2="3000" stroke="#556280" stroke-width="7.5"/>
+    <line x1="1125" y1="2250" x2="1875" y2="3000" stroke="#556280" stroke-width="7.5"/>
+    <line x1="2250" y1="2250" x2="3000" y2="3000" stroke="#556280" stroke-width="7.5"/>
+  </g>
+  
+  <!-- Wave elements for seamless tiling scaled up -->
+  <path d="M0,375 Q750,225 1500,375 T3000,375" 
+        fill="none" stroke="#556280" stroke-width="7.5" opacity="0.04"/>
+  <path d="M0,900 Q1125,750 2250,900 T4500,900" 
+        fill="none" stroke="#556280" stroke-width="7.5" opacity="0.03"/>
+  <path d="M0,1500 Q750,1350 1500,1500 T3000,1500" 
+        fill="none" stroke="#556280" stroke-width="7.5" opacity="0.05"/>
+  <path d="M0,2100 Q1125,1950 2250,2100 T4500,2100" 
+        fill="none" stroke="#556280" stroke-width="7.5" opacity="0.04"/>
+  
+  <!-- Seamless edge elements scaled -->
+  <!-- Left edge continuation -->
+  <rect x="-37.5" y="1875" width="75" height="600" fill="#556280" opacity="0.1"/>
+  <rect x="-37.5" y="1650" width="75" height="825" fill="#556280" opacity="0.12"/>
+  
+  <!-- Right edge continuation -->
+  <rect x="2962.5" y="2025" width="75" height="450" fill="#556280" opacity="0.09"/>
+  <rect x="2962.5" y="1800" width="75" height="675" fill="#556280" opacity="0.11"/>
+  
+  <!-- Top edge continuation -->
+  <path d="M0,-37.5 Q750,-187.5 1500,-37.5 T3000,-37.5 L3000,37.5 Q2250,187.5 1500,37.5 T0,37.5 Z" 
+        fill="url(#primaryGradHR)" opacity="0.2"/>
+  
+  <!-- Bottom edge continuation -->
+  <path d="M0,2962.5 Q1125,2812.5 2250,2962.5 T4500,2962.5 L4500,3037.5 Q3375,3187.5 2250,3037.5 T0,3037.5 Z" 
+        fill="url(#accentGradHR)" opacity="0.25"/>
+</svg>
